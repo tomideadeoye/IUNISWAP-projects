@@ -18,7 +18,12 @@ const config: HardhatUserConfig = {
 		goerli: {
 			url: process.env.GOERLI_RPC,
 			//@ts-ignore
-			accounts: [process.env.PRIVATE_KEY1, process.env.PRIVATE_KEY2],
+			accounts: [process.env.PRIVATE_KEY2, process.env.PRIVATE_KEY1],
+		},
+		mumbai: {
+			url: "https://matic-testnet-archive-rpc.bwarelabs.com",
+			//@ts-ignore
+			accounts: [process.env.PRIVATE_KEY],
 		},
 	},
 };

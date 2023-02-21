@@ -2,11 +2,12 @@
 pragma solidity ^0.8.9;
 
 interface IERC20 {
-    function approve(address _spender, uint256 _value) external;
+    function approve(address spender, uint256 value) external returns (bool);
 
     function balanceOf(address who) external view returns (uint256);
 
-    function allowance(address _owner, address _spender)
+    function allowance(address owner, address spender)
         external
-        returns (uint256 remaining);
+        view
+        returns (uint256);
 }
