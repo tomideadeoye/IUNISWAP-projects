@@ -15,8 +15,8 @@ async function main() {
 	const impersonatedSigner = await ethers.getSigner(DAIHolderToImpersonate);
 
 	// CONTRACTS
-	const DaiContract = await ethers.getContractAt("IERC20", DAI);
-	const UniContract = await ethers.getContractAt("IERC20", UNI);
+	const DaiContract = await ethers.getContractAt("IERC721", DAI);
+	const UniContract = await ethers.getContractAt("IERC721", UNI);
 	const Uniswap = await ethers.getContractAt("IUniswap", ROUTER);
 
 	console.log(
